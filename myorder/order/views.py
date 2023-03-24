@@ -52,5 +52,7 @@ def search(request):
     elif select == 'front':
         order_list = Order.objects.filter(order_text__startswith = get_text)
 
+    print('aa')
+
     return render(request, 'order/order_list.html', {'order_list':order_list})
         
