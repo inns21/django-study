@@ -14,4 +14,6 @@ urlpatterns = [
     path('<int:id>/delete/', views.delete),
     # 주문 검색
     path('order_list/search/', views.search),
+    # 주문 상세 내역서
+    path('<int:id>/', views.show),
 ]

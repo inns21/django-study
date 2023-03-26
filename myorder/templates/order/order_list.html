@@ -27,7 +27,9 @@
         {% for order in order_list %}
         <tr>
             <td>{{ order.id }}</td>
-            <td>{{ order.order_text }}</td>
+            <td>
+                <a href="../{{ order.id}}/">{{ order.order_text }}</a>
+            </td>
             <td>{{ order.price }}</td>
             <td>{{ order.order_time }}</td>
             <td>{{ order.address }}</td>

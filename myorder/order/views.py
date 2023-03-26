@@ -56,3 +56,12 @@ def search(request):
 
     return render(request, 'order/order_list.html', {'order_list':order_list})
         
+def show(request, id):
+    order = Order.objects.get(id = id)
+    context = {
+        'order': order,
+        'text_list' : order.order_text.split(',')
+    }
+    
+    return render(request, 'order/order_show.html', context)
+
