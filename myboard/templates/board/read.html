@@ -37,32 +37,22 @@
       tmp_rid = '#updateReply' + rid
       tmp_bnt1 = '#updateReplybtn' + rid
       tmp_bnt2 = '#cancelReplybtn' + rid
-      $.ajax({
-        success: function () {
-          //$('#replyText').val(reply);
-          //$('#btnwrite').hide();
-          //$('#btnupdate').show();
-          //$('#updateRid').val(rid);
-          $(tmp_rid).show();
-          $(tmp_rid).val(reply);
-          $(tmp_bnt1).show();
-          $(tmp_bnt2).show();
-        }
-      });
+      $(tmp_rid).show();
+      $(tmp_rid).val(reply);
+      $(tmp_bnt1).show();
+      $(tmp_bnt2).show();
+
     }
 
     function cancelRepl(rid) {
       tmp_rid = '#updateReply' + rid
       tmp_bnt1 = '#updateReplybtn' + rid
       tmp_bnt2 = '#cancelReplybtn' + rid
-      $.ajax({
-        success: function () {
-          $(tmp_rid).val();
-          $(tmp_rid).hide();
-          $(tmp_bnt1).hide();
-          $(tmp_bnt2).hide();
-        }
-      });
+      $(tmp_rid).val();
+      $(tmp_rid).hide();
+      $(tmp_bnt1).hide();
+      $(tmp_bnt2).hide();
+
     }
 
     function updateRepl(rid, reply) {
